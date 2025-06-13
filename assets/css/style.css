@@ -1,0 +1,143 @@
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Active link style */
+.nav-link.active {
+    color: #eab308; /* Tailwind's yellow-500 */
+    border-bottom: 2px solid #eab308;
+    padding-bottom: 4px;
+}
+
+/* Style for the blueprint background */
+.blueprint-bg {
+    background-color: #34495e;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+    background-size: 2rem 2rem;
+}
+
+/* Gallery Styles */
+.gallery-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery-item {
+    flex: 0 0 25%; /* Show 4 items by default */
+    margin: 0 10px;
+    clip-path: polygon(20% 0, 100% 0, 80% 100%, 0 100%);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .gallery-item {
+        flex: 0 0 50%; /* Show 2 items on smaller screens */
+    }
+}
+
+ @media (max-width: 480px) {
+    .gallery-item {
+        flex: 0 0 100%; /* Show 1 item on mobile */
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+
+
+/* BOTON DE WHATSAPP*/
+/* Estilo para el botón flotante de WhatsApp */
+.whatsapp-btn {
+  position: fixed; /* Fija el botón en la pantalla */
+  bottom: 40px; /* Distancia desde el fondo */
+  right: 20px; /* Distancia desde el lado derecho */
+  width: 60px; /* Tamaño del botón */
+  height: 60px; /* Tamaño del botón */
+  border-radius: 50%; /* Hacerlo redondo */
+  background-color: #25d366; /* Fondo verde de WhatsApp */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para darle efecto de flotante */
+  z-index: 1000; /* Asegura que el botón siempre esté encima de otros elementos */
+  transition: all 0.3s ease; /* Suaviza las transiciones */
+}
+.whatsapp-icon {
+  width: 30px; /* Tamaño del icono de WhatsApp */
+  height: 30px;
+}
+/* Efecto hover para resaltar el botón */
+.whatsapp-btn:hover {
+  transform: scale(1.1); /* Hace que el botón se agrande un poco cuando pasa el mouse */
+}
+
+
+/* BOTON DE SCROLL*/
+/* Estilo para el botón de subir al principio */
+.scroll-to-top-btn {
+  display: none; /* Inicialmente oculto */
+  position: fixed; /* Fija el botón en la pantalla */
+  bottom: 120px; /* Distancia desde el fondo */
+  right: 20px; /* Distancia desde el lado derecho */
+  width: 60px; /* Tamaño del botón */
+  height: 60px; /* Tamaño del botón */
+  border-radius: 50%; /* Hace que sea redondo */
+  background-color: #007bff9f; /* Fondo azul */
+  color: white; /* Color del icono */
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para dar efecto flotante */
+  z-index: 1000; /* Asegura que el botón quede encima de otros elementos */
+  transition: all 0.3s ease; /* Suaviza las transiciones */
+  font-size: 24px; /* Tamaño del icono */
+  cursor: pointer; /* Cambia el cursor a mano cuando pasa sobre el botón */
+  position: fixed;
+}
+/* Efecto hover para resaltar el botón */
+.scroll-to-top-btn:hover {
+  transform: scale(1.1); /* Agranda el botón ligeramente cuando se pasa el mouse */
+}
+/* Estilo para el icono dentro del botón */
+.scroll-to-top-btn i {
+  font-size: 30px; /* Tamaño del icono */
+}
+/*----------------------------------------------------*/

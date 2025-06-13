@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REMSE - Bobinados y Servicio Eléctrico</title>
+
+    <meta property="og:title" content="REMSE - Servicio y Reparación de Motores Eléctricos" />
+    <meta property="og:description" content="REMSE ofrece servicios especializados en diagnóstico, reparación, rebobinado y mantenimiento de motores eléctricos, generadores y bombas para la gran industria." />
+    <meta property="og:image" content="https://www.climasmcm.cl.cl/assets/img/favicon_io/android-chrome-192x192.png" />
+    <meta property="og:url" content="https://www.remse.cl/" />
+    <meta property="og:type" content="website" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Top Bar -->
+    <div class="bg-gray-100 border-b border-gray-200 sticky top-0 z-[1010] h-10">
+        <div class="container mx-auto px-6 py-2 flex justify-between items-center text-sm text-gray-600">
+            <!-- Left Side: Contact Info -->
+            <div class="flex items-center space-x-6">
+                <a href="tel:+56987713323" class="flex items-center hover:text-blue-600 transition duration-300">
+                    <i class="fas fa-phone-alt mr-2"></i>
+                    +56987713323
+                </a>
+                <span class="border-l border-gray-300 h-4"></span>
+                <a href="mailto:info@remse.cl" class="flex items-center hover:text-blue-600 transition duration-300">
+                    <i class="fas fa-envelope mr-2"></i>
+                    info@remse.cl
+                </a>
+            </div>
+            <!-- Right Side: Social Icons -->
+            <div class="flex items-center space-x-4 hidden md:flex">
+                <a href="https://api.whatsapp.com/send?phone=56987713323&text=Hola,%20me%20gustaría%20obtener%20más%20información" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-green-500 transition duration-300">
+                    <i class="fab fa-whatsapp fa-lg"></i>
+                </a>
+                <a href="#" class="text-gray-600 hover:text-pink-500 transition duration-300">
+                    <i class="fab fa-instagram fa-lg"></i>
+                </a>
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition duration-300">
+                    <i class="fab fa-facebook-f fa-lg"></i>
+                </a>
+                <a href="#" class="text-gray-600 hover:text-blue-700 transition duration-300">
+                    <i class="fab fa-linkedin-in fa-lg"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-10 z-[1005]">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div>
+                <img src="./assets/img/logo.png" width="220" alt="">
+            </div>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#inicio" class="nav-link text-gray-600 hover:text-yellow-500 transition duration-300">Inicio</a>
+                <a href="#servicios" class="nav-link text-gray-600 hover:text-yellow-500 transition duration-300">Servicios</a>
+                <a href="#nosotros" class="nav-link text-gray-600 hover:text-yellow-500 transition duration-300">Nosotros</a>
+                <a href="#marcas" class="nav-link text-gray-600 hover:text-yellow-500 transition duration-300">Marcas</a>
+                <a href="#industrias" class="nav-link text-gray-600 hover:text-yellow-500 transition duration-300">Industrias</a>
+                <a href="#contacto" class="nav-link text-gray-600 hover:text-yellow-500 transition duration-300">Contacto</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-900 focus:outline-none">
+                    <svg id="menu-open-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    <svg id="menu-close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full h-screen bg-white/80 backdrop-blur-lg">
+            <div class="flex flex-col items-center justify-center h-full space-y-8">
+                <a href="#inicio" class="nav-link text-2xl text-gray-800 hover:text-yellow-500 transition duration-300">Inicio</a>
+                <a href="#servicios" class="nav-link text-2xl text-gray-800 hover:text-yellow-500 transition duration-300">Servicios</a>
+                <a href="#nosotros" class="nav-link text-2xl text-gray-800 hover:text-yellow-500 transition duration-300">Nosotros</a>
+                <a href="#marcas" class="nav-link text-2xl text-gray-800 hover:text-yellow-500 transition duration-300">Marcas</a>
+                <a href="#industrias" class="nav-link text-2xl text-gray-800 hover:text-yellow-500 transition duration-300">Industrias</a>
+                <a href="#contacto" class="nav-link text-2xl text-gray-800 hover:text-yellow-500 transition duration-300">Contacto</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main id="inicio" class="min-h-screen flex items-center justify-center bg-white py-10 pt-24 -mt-16">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row shadow-2xl rounded-lg overflow-hidden md:h-[85vh]">
+                <!-- Left Side - Text -->
+                <div class="w-full md:w-5/12 bg-yellow-500 text-black p-8 md:p-16 flex flex-col justify-center">
+                    <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-4">
+                        Servicio de Reparaciones para Motores Eléctricos
+                    </h2>
+                    <div class="w-24 h-1 bg-black mb-6"></div>
+                    <p class="text-base md:text-lg">
+                        ¿Tu motor eléctrico presenta fallas o bajo rendimiento? Somos especialistas en diagnóstico, reparación y mantenimiento, asegurando soluciones eficientes, confiables y de larga duración.
+                    </p>
+                    <a href="https://api.whatsapp.com/send?phone=56987713323&text=Hola,%20me%20gustaría%20saber%20más%20sobre%20el%20servicio%20de%20reparación%20de%20motores%20eléctricos." target="_blank" rel="noopener noreferrer" class="mt-8 inline-block bg-black text-yellow-400 font-bold py-3 px-8 rounded-lg hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105 text-center">
+                        Más Información
+                    </a>
+                </div>
+
+                <!-- Right Side - Image -->
+                <div class="w-full md:w-7/12">
+                    <img src="./assets/img/s1.jpg" alt="Imagen de varios motores eléctricos grandes y azules en una instalación industrial." class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Services Section -->
+    <section id="servicios" class="min-h-screen flex items-center justify-center bg-white py-10 pt-24 -mt-16">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row-reverse shadow-2xl rounded-lg overflow-hidden md:h-[85vh]">
+                <!-- Right Side - Text -->
+                <div class="w-full md:w-7/12 bg-yellow-500 text-black p-8 md:p-16 flex flex-col justify-center">
+                    <h2 class="text-3xl font-bold mb-4">Servicio de motores eléctricos</h2>
+                    <p class="mb-4">
+                        En nuestro taller de servicio, realizamos rebobinados y reparaciones de motores eléctricos, generadores, sistemas de tracción, bombas y transmisiones, garantizando un óptimo rendimiento y durabilidad.
+                    </p>
+                    <p class="mb-6">
+                        La experiencia de REMSE es la base de nuestra relación a largo plazo con los clientes, ofreciendo soluciones confiables y de calidad.
+                    </p>
+                     <a href="https://api.whatsapp.com/send?phone=56987713323&text=Hola,%20me%20gustaría%20cotizar%20un%20servicio%20de%20motores%20eléctricos." target="_blank" rel="noopener noreferrer" class="mt-8 inline-block bg-black text-yellow-400 font-bold py-3 px-8 rounded-lg hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105 text-center">
+                        Cotizar Servicio
+                    </a>
+                </div>
+                 <!-- Left Side - Image -->
+                <div class="w-full md:w-5/12">
+                     <img src="./assets/img/s2.jpg" alt="Técnico sonriendo mientras sostiene una pieza de motor eléctrico." class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workshop Section -->
+    <section class="min-h-screen flex items-center justify-center bg-white py-10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row shadow-2xl rounded-lg overflow-hidden md:h-[85vh]">
+                <!-- Left Side - Text -->
+                <div class="w-full md:w-7/12 bg-gray-700 text-yellow-400 p-8 md:p-16 flex flex-col justify-center">
+                    <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6">
+                        Ofrecemos un taller especializado en reparación de motores eléctricos
+                    </h2>
+                    <p class="text-white text-base md:text-lg mb-6">
+                        La reparación de motores eléctricos es una labor especializada que exige experiencia, precisión y equipos técnicos adecuados. El diagnóstico de las máquinas incluye análisis detallado de los devanados, evaluación del estado de los rodamientos y estudios de espectros de vibración para asegurar un funcionamiento confiable y duradero.
+                    </p>
+                    <a href="https://api.whatsapp.com/send?phone=56987713323&text=Hola,%20tengo%20una%20consulta%20sobre%20su%20taller%20especializado." target="_blank" rel="noopener noreferrer" class="mt-8 inline-block bg-yellow-500 text-black font-bold py-3 px-8 rounded-lg hover:bg-yellow-600 transition duration-300 ease-in-out transform hover:scale-105 text-center">
+                        Consultar a un Experto
+                    </a>
+                </div>
+
+                <!-- Right Side - Image -->
+                <div class="w-full md:w-5/12">
+                    <img src="./assets/img/s3.jpg" alt="Primer plano de un técnico trabajando en maquinaria." class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Traction Motors Section -->
+    <section class="min-h-screen flex items-center justify-center bg-white py-10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row-reverse shadow-2xl rounded-lg overflow-hidden md:h-[85vh]">
+                <!-- Right Side - Text -->
+                <div class="w-full md:w-7/12 bg-gray-800 text-white p-8 md:p-16 flex flex-col justify-center">
+                    <h2 class="text-3xl font-bold text-yellow-400 mb-6">Motores de tracción</h2>
+                    <p class="text-lg mb-6">
+                        También realizamos servicio, renovación y rebobinado de motores de tracción en nuestro taller. Con los nuevos métodos de diagnóstico y mantenimiento, podemos optimizar el mantenimiento preventivo de diferentes tipos de motores de tracción.
+                    </p>
+                    <a href="https://api.whatsapp.com/send?phone=56987713323&text=Hola,%20necesito%20asesoría%20sobre%20motores%20de%20tracción." target="_blank" rel="noopener noreferrer" class="mt-8 inline-block bg-yellow-500 text-black font-bold py-3 px-8 rounded-lg hover:bg-yellow-600 transition duration-300 ease-in-out transform hover:scale-105 text-center">
+                        Pedir Asesoría
+                    </a>
+                </div>
+                <!-- Left Side - Image -->
+                <div class="w-full md:w-5/12">
+                    <img src="./assets/img/s4.jpg" alt="Técnico trabajando en un motor en blanco y negro." class="w-full h-full object-cover filter grayscale">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Motor Problems Section -->
+    <section class="min-h-screen flex items-center justify-center bg-white py-10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row shadow-2xl rounded-lg overflow-hidden md:h-[85vh]">
+                <!-- Left Side - Image -->
+                <div class="w-full md:w-5/12">
+                    <img src="./assets/img/s5.jpg" alt="Generador eléctrico industrial de color verde lima." class="w-full h-full object-cover">
+                </div>
+                <!-- Right Side - Text -->
+                <div class="w-full md:w-7/12 bg-yellow-500 text-black p-8 md:p-16 flex flex-col justify-center">
+                    <p class="text-lg mb-4">
+                        A pesar de la robustez de los motores eléctricos, no son inmunes a los problemas. Los problemas más comunes están <strong>relacionados con el bobinado</strong>. Un devanado defectuoso o desgastado puede provocar <strong>pérdidas de eficiencia, sobrecalentamiento y fallas catastróficos del motor</strong>.
+                    </p>
+                    <p class="text-lg mb-6">
+                        Además de los problemas del devanado, desequilibrios de voltaje, las fallas de los cojinetes y los problemas con los condensadores son desafíos comunes. En REMSE entendemos la complejidad y la criticidad del bobinado, garantizando servicios de reparación y mantenimiento de alta calidad para cada bobinado de motor eléctrico.
+                    </p>
+                     <a href="https://api.whatsapp.com/send?phone=56987713323&text=Hola,%20creo%20que%20mi%20motor%20tiene%20un%20problema%20y%20me%20gustaría%20una%20evaluación." target="_blank" rel="noopener noreferrer" class="mt-8 inline-block bg-black text-yellow-400 font-bold py-3 px-8 rounded-lg hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105 text-center">
+                        Evaluar Mi Motor
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience, Mission, Perspective Section -->
+    <section id="nosotros" class="min-h-screen flex items-center justify-center bg-white py-16 pt-24 -mt-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Experience Column -->
+                <div class="text-center">
+                    <div class="flex justify-center mb-4">
+                        <div class="bg-gray-200 rounded-full p-5 inline-block">
+                             <i class="fas fa-cogs fa-3x text-gray-600"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-yellow-500 mb-3">Nuestra experiencia</h3>
+                    <p class="text-gray-600">
+                        Consolidamos nuestra experiencia con un equipo de profesionales con una dilatada experiencia en el área electromecánica industrial. Nos especializamos en Diagnóstico, Reparación y bobinado, balanceo y alineación, análisis de vibraciones y termografía y mejora del rendimiento.
+                    </p>
+                </div>
+                <!-- Mission Column -->
+                <div class="text-center">
+                    <div class="flex justify-center mb-4">
+                        <div class="bg-gray-200 rounded-full p-5 inline-block">
+                            <i class="fas fa-rocket fa-3x text-gray-600"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-yellow-500 mb-3">Nuestra misión</h3>
+                    <p class="text-gray-600">
+                        Liderar la transformación y optimización de procesos para lograr alto rendimiento y competitividad. Nuestro objetivo es maximizar la eficiencia operativa y asegurar el éxito sostenible de nuestros clientes en un entorno en constante evolución.
+                    </p>
+                </div>
+                <!-- Perspective Column -->
+                <div class="text-center">
+                    <div class="flex justify-center mb-4">
+                        <div class="bg-gray-200 rounded-full p-5 inline-block">
+                             <i class="fas fa-handshake fa-3x text-gray-600"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-yellow-500 mb-3">Perspectiva</h3>
+                    <p class="text-gray-600">
+                        Nos enfocamos en la seguridad, el bienestar de nuestros empleados y clientes, y en la obtención de resultados para impulsar la mejora continua y brindar un servicio excepcional.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workshop Gallery Section -->
+    <section class="bg-gray-50 py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12">Nuestro Taller</h2>
+            <div id="gallery" class="gallery-container">
+                <div id="gallery-wrapper" class="gallery-wrapper">
+                    <!-- Images will be dynamically inserted here -->
+                </div>
+                <button id="prev-btn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-20 hover:bg-opacity-75 transition-opacity">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="next-btn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full z-20 hover:bg-opacity-75 transition-opacity">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Full-screen Image -->
+    <div id="image-modal" class="modal hidden">
+        <span id="close-modal-btn" class="close-modal">&times;</span>
+        <img id="modal-image" class="modal-content" src="" alt="Imagen del taller en pantalla completa">
+    </div>
+
+
+    <!-- Clients Section -->
+    <section class="bg-white py-16">
+        <div class="bg-gray-700 py-4">
+            <h2 class="text-3xl font-bold text-center text-yellow-400">Nuestros clientes</h2>
+        </div>
+        <div class="container mx-auto px-6 pt-12">
+            <div class="flex flex-wrap items-center justify-center gap-x-16 gap-y-8">
+                <img src="./assets/img/clientes/superfruit.JPG" alt="Logo de Superfruit" class="h-16">
+                <img src="./assets/img/clientes/tecma.JPG" alt="Logo de TECMA EFLUENTES" class="h-16">
+                <img src="./assets/img/clientes/fsroma.JPG" alt="Logo de FSRoma" class="h-16">
+                <img src="./assets/img/clientes/jimetal.JPG" alt="Logo de Maestranza JIMETAL" class="h-16">
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section id="marcas" class="bg-white pb-16 pt-24 -mt-16">
+        <div class="bg-gray-700 py-4">
+            <h2 class="text-3xl font-bold text-center text-yellow-400">Marcas Comerciales Reconocidas por Nuestro Taller</h2>
+        </div>
+        <div class="container mx-auto px-6 pt-12">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center mb-12">
+                <img src="./assets/img/marcas/abb.png" alt="Logo de ABB" class="h-12">
+                <img src="./assets/img/marcas/siemens.png" alt="Logo de SIEMENS" class="h-16">
+                <img src="./assets/img/marcas/weg.png" alt="Logo de WEG" class="h-16">
+                <img src="./assets/img/marcas/schneider.png" alt="Logo de Schneider Electric" class="h-12">
+                <img src="./assets/img/marcas/ge.png" alt="Logo de GE" class="h-16">
+                <img src="./assets/img/marcas/westing.png" alt="Logo de Westinghouse" class="h-12">
+            </div>
+            <div class="border-t border-gray-200 pt-8 grid md:grid-cols-3 gap-8 items-start">
+                <h3 class="text-lg font-semibold text-gray-700 md:col-span-1">Marcas Reconocidas en Aplicaciones Específicas</h3>
+                <div class="md:col-span-2">
+                    <p class="text-gray-600">Leroy-Somer / Brook Crompton / Regal Beloit / SEW-Eurodrive</p>
+                    <p class="font-bold text-gray-800 mt-2">Especificaciones especiales para la industria minera y ferroviaria</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Industries Section -->
+    <section id="industrias" class="bg-white pb-16 pt-24 -mt-16">
+        <div class="bg-gray-700 py-4">
+            <h2 class="text-3xl font-bold text-center text-yellow-400">Llevamos Nuestra Experiencia en Motores Eléctricos a la Gran Industria</h2>
+        </div>
+        <div class="container mx-auto px-6 pt-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="font-semibold mb-2">Transporte</h3>
+                    <img src="./assets/img/i1.JPG" alt="Rueda de tren en primer plano en las vías." class="rounded-lg shadow-md">
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-2">Plantas</h3>
+                    <img src="./assets/img/i2.JPG" alt="Cinta transportadora industrial con motor." class="rounded-lg shadow-md">
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-2">Minería</h3>
+                    <img src="./assets/img/i3.jpg" alt="Gran camión volquete amarillo en una mina." class="rounded-lg shadow-md">
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-2">Áridos</h3>
+                    <img src="./assets/img/i4.JPG" alt="Planta de procesamiento de áridos con cintas transportadoras." class="rounded-lg shadow-md">
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-2">Celulosa & Papelera</h3>
+                    <img src="./assets/img/i5.JPG" alt="Máquina industrial en una planta de celulosa." class="rounded-lg shadow-md">
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-2">Alimentos</h3>
+                    <img src="./assets/img/i6.jpg" alt="Línea de procesamiento de alimentos en acero inoxidable." class="rounded-lg shadow-md">
+                </div>
+            </div>
+            <div class="text-center mt-12 mb-12">
+                <a href="https://api.whatsapp.com/send?phone=56987713323&text=Hola,%20me%20gustaría%20saber%20qué%20soluciones%20ofrecen%20para%20mi%20industria." target="_blank" rel="noopener noreferrer" class="inline-block bg-yellow-500 text-black font-bold py-3 px-8 rounded-lg hover:bg-yellow-600 transition duration-300 ease-in-out transform hover:scale-105">
+                    Soluciones para mi Industria
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contacto" class="blueprint-bg py-20 pt-24 -mt-16">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-2xl p-8 md:p-12">
+                <h2 class="text-2xl font-bold text-center text-gray-800 mb-8">Contáctate con nuestro equipo</h2>
+                <form id="contact-form">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <input type="text" name="nombre" placeholder="Nombre" class="w-full bg-gray-100 border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-yellow-500" required>
+                        <input type="text" name="apellido" placeholder="Apellido" class="w-full bg-gray-100 border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        <input type="email" name="email" placeholder="Email" class="w-full bg-gray-100 border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-yellow-500" required>
+                        <input type="tel" name="telefono" placeholder="Teléfono" class="w-full bg-gray-100 border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-yellow-500" required>
+                    </div>
+                    <div class="flex items-center gap-6 mb-6">
+                        <label class="flex items-center text-gray-700">
+                            <input type="radio" name="tipo_cliente" value="Empresa" class="mr-2 h-4 w-4 text-yellow-600 focus:ring-yellow-500 border-gray-300" required>
+                            Empresa
+                        </label>
+                        <label class="flex items-center text-gray-700">
+                            <input type="radio" name="tipo_cliente" value="Persona Natural" class="mr-2 h-4 w-4 text-yellow-600 focus:ring-yellow-500 border-gray-300">
+                            Persona Natural
+                        </label>
+                    </div>
+                    <div class="mb-6">
+                        <textarea name="mensaje" placeholder="Déjanos tu mensaje con la información que necesitas" rows="4" class="w-full bg-gray-100 border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
+                    </div>
+                    <div class="text-right">
+                        <button type="submit" class="bg-green-500 text-white font-bold py-3 px-8 rounded-lg hover:bg-green-600 transition duration-300">
+                            Enviar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12 items-start">
+                <!-- Contact Info & Socials -->
+                <div class="md:col-span-1 space-y-6">
+                    <h3 class="text-2xl font-bold text-yellow-400">Contacto</h3>
+                    <a href="tel:+56987713323" class="flex items-center space-x-3 hover:text-yellow-400 transition duration-300">
+                        <i class="fas fa-phone-alt fa-lg"></i>
+                        <span class="text-lg">+56 9 8771 3323</span>
+                    </a>
+                     <a href="mailto:info@remse.cl" class="flex items-center space-x-3 hover:text-yellow-400 transition duration-300">
+                        <i class="fas fa-envelope fa-lg"></i>
+                        <span class="text-lg">info@remse.cl</span>
+                    </a>
+                    <div class="flex items-center space-x-6 pt-4">
+                        <a href="https://api.whatsapp.com/send?phone=56987713323&text=Hola,%20me%20gustaría%20obtener%20más%20información" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-green-500 transition duration-300">
+                            <i class="fab fa-whatsapp fa-2x"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-pink-500 transition duration-300">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-blue-500 transition duration-300">
+                            <i class="fab fa-facebook-f fa-2x"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-blue-400 transition duration-300">
+                            <i class="fab fa-linkedin-in fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Locations & Maps -->
+                <div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-xl font-semibold text-yellow-400 mb-2">Oficina Central (Rancagua)</h4>
+                        <p class="text-gray-300 mb-4">Manuel Montt 957, Villa Constanza</p>
+                        <div class="rounded-lg overflow-hidden shadow-lg">
+                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3291.683515444975!2d-70.74472228477544!3d-34.40875398051016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x966343542718f4a7%3A0x63c50a1127027395!2sManuel%20Montt%20957%2C%20Rancagua%2C%20O'Higgins!5e0!3m2!1ses-419!2scl!4v1655071199341!5m2!1ses-419!2scl" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                     <div>
+                        <h4 class="text-xl font-semibold text-yellow-400 mb-2">Talleres y Fábrica (Lo Miranda)</h4>
+                        <p class="text-gray-300 mb-4">Ruta H-30 #3051, Camino Doñihue</p>
+                        <div class="rounded-lg overflow-hidden shadow-lg">
+                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3293.424451631551!2d-70.84000308477675!3d-34.36444898052219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96636733318f7731%3A0x8f2c61f21571430!2sRuta%20H-30%203051%2C%20Do%C3%B1ihue%2C%20O'Higgins!5e0!3m2!1ses-419!2scl!4v1655071353954!5m2!1ses-419!2scl" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-gray-500 pt-12 mt-12 border-t border-gray-700">
+            <p>&copy; 2024 REMSE. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+
+    <!-- Botón de WhatsApp -->
+<a href="https://wa.me/1234567890" class="whatsapp-btn" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
+</a>
+
+<!-- Botón de subir -->
+<a href="#top" class="scroll-to-top-btn" id="scrollToTopBtn">
+  <i class="fas fa-arrow-up"></i> <!-- Icono de flecha hacia arriba -->
+</a>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
