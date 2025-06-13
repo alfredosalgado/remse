@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const closeModalBtn = document.getElementById('close-modal-btn');
 
         // --- Configuration ---
-        const totalImages = 126; // Define the total number of images
+        const totalImages = 26; // Define the total number of images
         const imagePath = 'assets/img/galeria/'; // Define the path to the images
         let currentIndex = 0;
         let autoSlideInterval;
